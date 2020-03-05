@@ -1,0 +1,17 @@
+[Unit]
+Description=player service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+Environment="INFOBEAMER_LOG_LEVEL=1"
+Environment="INFOBEAMER_SWAP_LEVEL=1"
+Environment="INFOBEAMER_ENV_HEIGHT=100"
+Environment="INFOBEAMER_ENV_WIDTH=100"
+ExecStart=/home/pi/mysterio-rio/player/info-beamer /home/pi/mysterio-rio/player/main-node
+
+[Install]
+WantedBy=multi-user.target
