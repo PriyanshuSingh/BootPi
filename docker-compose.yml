@@ -18,7 +18,7 @@ services:
     image: v2tec/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /Users/dhruvgupta/.docker/config.json:/config.json
+      - ~/.docker/config.json:/config.json
     command: --debug --interval 30
 
 # Add login credentials for the account in the .docker/config.json file.
